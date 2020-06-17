@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="mine.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Warnasite</title>
+  </head>
+  <style>
+
+html {
+  scroll-behavior: smooth;
+}
+
+    body {
+    background-color: rgb(255, 187, 0);
+}
+
+.myheader {
+  background-image: url(1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+  width: 100%;
+}
+
+.myheader h1 {
+  color: white;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.myimg:hover {
+  opacity: 0.5;
+}
+
+.mycontainer {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.mycontainer:hover .image {
+  opacity: 0.3;
+}
+
+.mycontainer:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.display-4 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+.header a {
+  text-decoration: none;
+}
+
+.mydown {
+  text-align: center;
+  padding-left: 50%;
+}
+
+.jumbotron {
+  background-color: orange;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+ </style>
+  <body>
+    <div class="header">
+        <a href=""><h1 class="display-4">WARNASITE</h1></a>
+        <i class="fas fa-angle-down mydown"></i>
+        <i class="fas fa-angle-down mydown"></i>
+        <i class="fas fa-angle-down mydown"></i>
+      </div>
+   
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-home" style="color: orange;"></i>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#promosi" style="color: orange;"><i class="fas fa-ad"></i>Mau pasang Iklan ?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: orange;"><i class="fas fa-plus"></i>Baru Buka</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: orange;"><i class="fas fa-exclamation"></i>Rekomendasi</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: orange;">
+              <i class="fas fa-map-marked-alt"></i> Pilih Lokasi
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#" style="color: orange;">Bekasi <span class="badge badge-light">Coming Soon</span> </a>
+                <a class="dropdown-item" href="#" style="color: orange;">Jakarta Utara <span class="badge badge-light">Coming Soon</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" style="color: orange;">Jakarta Timur <span class="badge badge-light">Coming Soon</span></a>
+                <a class="dropdown-item" href="#" style="color: orange;">Jakarta Barat <span class="badge badge-light">Coming Soon</span></a>
+                <div class="dropdown-divider" style="color: red;"></div>
+                <a class="dropdown-item" href="#" style="color: orange;"> Jakarta Selatan <span class="badge badge-light">Coming Soon</span></a>
+                <a class="dropdown-item" href="#" style="color: orange;"> Depok <span class="badge badge-light">Coming Soon</span></a>
+                <div class="dropdown-divider" style="color: red;"></div>
+                <a class="dropdown-item" href="#" style="color: orange;">Bogor <span class="badge badge-light">Coming Soon</span></a>
+                <a class="dropdown-item" href="#" style="color: orange;"> Cikarang <span class="badge badge-light">Coming Soon</span></a>
+                <div class="dropdown-divider"></div>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-danger">Masuk</button>
+            <button class="btn btn-outline-warning">Daftar</button>
+          </form>
+      </div>
+    </nav>
+    
+    <div class="jumbotron" id="promosi">
+      <h1 class="display-4 myintro">Selamat datang di website WARNAS !</h1>
+      <p class="lead">Tempat untuk kalian mencari warung nasi yang kami rekomendasikan berdasarkan cita rasa dan kenyamanan pelayanan</p>
+      <hr class="my-4">
+      <p>Kalian juga bisa yaa promosikan tempat makan kalian diwebsite ini kok</p>
+      <p class="lead">
+       <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    Cara Promosi
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Cara Promosi di WARNASITE !</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <p>1. Siapkan KTP</p>
+         <p>2. Siapkan Banner Digital</p>
+         <p>3. Siapkan list daftar menu</p>
+         <p>4. Lokasi harus terdeteksi dengan Gmaps (Boleh terdekat)</p>
+         <p>5. Tidak boleh ada nya pemalsuan identitas pemilik warnas</p>
+         <p>6. Warung harus bersih dan tertata</p>
+         <p>7. Sertakan foto sekeliling warung (Minimal 4 foto)</p>
+         <p>8. Sertakan jam buka dan jam tutup</p>
+         <p>9. Sertakan aplikasi pembelian ojek online (Bila ada)</p>
+         <p>10. Sertakan nomer HP pemilik untuk pengaduan pembeli</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Oke</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      </p>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="display-4 myintro">Selamat datang di Warnas Kang Edo !</h1>
+            <img src="3.jpg" alt="Avatar" class="image" style="width:100%; height: 100%;">
+          <div class="col col-lg-6 mycontainer">
+            <div class="jumbotron">
+                <h1 class="display-4">Menu Makanan Tersedia</h1>
+                <div class="table-responsive">
+                    <table class="table table-hover" style="height: 100%;">
+                        <thead>
+                          <tr>
+                            <th scope="col">Menu</th>
+                            <th scope="col">Makanan</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Pesan</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Nasi Goreng</td>
+                            <td>Rp 12.000</td>
+                            <td><a href="" class="btn" style="color: white; background-color: green;">Pesan Makanan</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Rendang Telur</td>
+                            <td>Rp 15.000</td>
+                            <td><a href="" class="btn" style="color: white; background-color: green;">Pesan Makanan</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td scope="col">Semur Jengkol</td>
+                            <td>Rp 10.000</td>
+                            <td><a href="" class="btn" style="color: white; background-color: green;">Pesan Makanan</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+        </div>
+          </div>
+          <div class="col col-lg-6 mycontainer">
+            <div class="jumbotron">
+                <h1 class="display-4">Menu Minuman Tersedia</h1>
+                <div class="table-responsive">
+                    <table class="table table-hover" style="height: 100%;">
+                        <thead>
+                          <tr>
+                            <th scope="col">Menu</th>
+                            <th scope="col">Minuman</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Pesan</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Es Teh Manis</td>
+                            <td>Rp 3.000</td>
+                            <td><a href="" class="btn" style="color: white; background-color: green;">Pesan Minuman</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jus Jeruk</td>
+                            <td>Rp 15.000</td>
+                            <td><a href="" class="btn" style="color: white; background-color: green;">Pesan Minuman</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td scope="col">Jus Alpukat</td>
+                            <td>Rp 20.000</td>
+                            <td><a href="" class="btn" style="color: white; background-color: green;">Pesan Minuman</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-lg-6">
+            <h3 class="text-center">Lokasi Tempat Makan</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61647.71558125808!2d106.92487518565115!3d-6.279094707924181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698dc1140778b9%3A0xfc33c528d9bef914!2sTaman%20Rusa%20Kemang%20Pratama!5e0!3m2!1sid!2sid!4v1592386909778!5m2!1sid!2sid" width="100%" 
+            height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+        </div>
+        <div class="col col-lg-6">
+            <h3 class="text-center">Testimoni Pembeli</h3> 
+            <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width slides/quotes -->
+    <div class="mySlides">
+      <q>Makanannya enak banget !!</q>
+      <p class="author">- Aldi</p>
+    </div>
+  
+    <div class="mySlides">
+      <q>Enak semua sih dan harga nya murah banget juga !</q>
+      <p class="author">- Ernest</p>
+    </div>
+  
+    <div class="mySlides">
+        <q>Ga kalah sama yang direstoran </q>
+        <p class="author">- Dandi</p>
+      </div>
+
+      <div class="mySlides">
+        <q>Dijamin puas dan ga nyesel deh</q>
+        <p class="author">- Rio</p>
+      </div>
+
+    <div class="mySlides">
+      <q>Tempat makannya juga enak banget sih ini</q>
+      <p class="author">- Frans</p>
+    </div>
+  
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
+  <!-- Dots/bullets/indicators -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div> 
+  <br><br>
+  <div>
+    <a href="" class="text-center" style="color: red;"><h5>Bisa Pesan melalui Gofood</h5></a> 
+    <br>
+     <a href="" class="text-center"  style="color: green;"><h5>Bisa Pesan melalui Grabfood</h5></a> 
+  </div>
+ 
+        </div>
+    </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>  
+</body>
+</html>
